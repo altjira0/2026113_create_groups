@@ -1,0 +1,44 @@
+# Formación aleatoria de equipos
+
+Este es un ejercicio de iniciación a Python para la asignatura de Fundamentos de Informática. El programa pide los nombres de los participantes y los reparte al azar en equipos. Si quedan pocas personas para completar el último equipo, forman un equipo más pequeño.
+
+## Cómo ejecutarlo
+
+1. Necesitas tener Python 3 instalado. El módulo `random` viene incluido con Python.
+2. Guarda el código del programa en un archivo llamado `equipos.py`.
+3. Abre una terminal en la carpeta donde has guardado el archivo y ejecuta el siguiente comando. En Windows también puedes usar `py equipos.py`.
+
+```bash
+python equipos.py
+```
+
+## Cómo se usa
+
+1. Introduce el número de participantes.
+2. Escribe un nombre cada vez que el programa te lo pida. Si pulsas Intro sin escribir nada, volverá a pedirte ese nombre.
+3. Indica cuántas personas quieres en cada equipo. Tanto esta cantidad como el número de participantes deben ser números enteros mayores que cero.
+
+El programa muestra la lista en el orden en que escribiste los nombres, enseña cómo ha quedado después de mezclarla y muestra los equipos. Para hacer otro sorteo, vuelve a ejecutar el programa.
+
+## Ejemplo
+
+Si participan Ana, Luis, Marta, Pablo y Sara y eliges dos personas por equipo, uno de los resultados posibles es el siguiente.
+
+```text
+EQUIPOS FORMADOS
+
+Equipo 1
+- Marta
+- Ana
+
+Equipo 2
+- Sara
+- Pablo
+
+Equipo 3
+- Luis
+```
+
+## Cómo funciona la mezcla
+
+Los nombres se guardan en una lista. La función `random.shuffle()` cambia su orden al azar. Después, dos bucles `while` recorren la lista: uno empieza cada equipo y el otro muestra sus miembros hasta que el equipo está completo o se acaban los nombres.
